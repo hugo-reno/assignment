@@ -38,8 +38,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <h1><a href="index.html">Burmese Power</a></h1>
             </div>
         <!--//logo-->
-          <div class="w3layouts-login">
-                <a data-toggle="modal" data-target="#myModal" href="#"><i class="glyphicon glyphicon-user"> </i>Login/Register</a>
+
+            <div class="w3layouts-login">
+                <a href="index"><i class="glyphicon glyphicon-user">About Us </i></a>
+            </div>
+            <div class="w3layouts-login">
+                <a href="index"><i class="glyphicon glyphicon-user">Contact Us</i></a>
+            </div>
+            <div class="w3layouts-login">
+                <a href="index"><i class="glyphicon glyphicon-user">Home </i></a>
             </div>
                 <div class="clearfix"></div>
     <!--Login modal-->
@@ -156,7 +163,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <div class="col-md-12">
                                         <div class="btn-group btn-group-justified">
                                             <a href="#" class="btn btn-primary">Facebook</a> <a href="#" class="btn btn-danger">
-                                                Google +</a>
+                                               </a>
                                         </div>
                                     </div>
                                 </div>
@@ -236,7 +243,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                  <div class="clearfix"> </div>
 
-                              <form action="#" method="get" class="creditly-card-form agileinfo_form">
+                              <form action="#" method="post" class="creditly-card-form agileinfo_form">
                                     <section class="creditly-wrapper wthree, w3_agileits_wrapper">
                                         <div class="credit-card-wrapper">
                                             <div class="first-row form-group">
@@ -244,19 +251,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                     <label class="control-label">Name on Card</label>
                                                     <input class="billing-address-name form-control" type="text" name="name" placeholder="John Smith">
                                                 </div>
-                                                <div class="controls">
-                                                    <label class="control-label">Amount</label>
-                                                    <input class="billing-address-name form-control" type="text" name="amount" >
-                                                </div>
-                                                <div class="controls">
-                                                    <label class="control-label">Password</label>
-                                                    <input class="billing-address-name form-control" type="text" name="password" >
-                                                </div>
                                                 <div class="w3_agileits_card_number_grids">
                                                     <div class="w3_agileits_card_number_grid_left">
                                                         <div class="controls">
                                                             <label class="control-label">Card Number</label>
-                                                            <input class="number credit-card-number form-control" type="text" name="cardNumber"
+                                                            <input class="number credit-card-number form-control" type="text" name="number"
                                                                           inputmode="numeric" autocomplete="cc-number" autocompletetype="cc-number" x-autocompletetype="cc-number"
                                                                           placeholder="&#149;&#149;&#149;&#149; &#149;&#149;&#149;&#149; &#149;&#149;&#149;&#149; &#149;&#149;&#149;&#149;">
                                                         </div>
@@ -266,7 +265,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                 </div>
 
                                             </div>
-                                            <button class="submit" name="submit"><span>Pay Bill <i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></button>
+                                            <button class="submit"><span>Pay Bill <i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></button>
                                         </div>
                                     </section>
                                 </form>
@@ -326,40 +325,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <!--geolocatoin-->
     <div class="phone" id="mobileappagileits">
-        <div class="container">
-            <div class="col-md-6">
-            </div>
 
-            <div class="clearfix"></div>
-            <div class="wthree-mobile-app">
+            <div class="container">
+                <h3 class="w3-head">Contact Us</h3>
+                    <div class="contact-main">
+                        <div class="col-md-6 map">
+                            <p class="loc">Our Location</p>
+                            <iframe src="https://www.google.com/maps/place/Sanchaung+Twp,+Yangon/@16.8071299,96.1257999,15.44z/data=!4m5!3m4!1s0x30c1eb47775f8a0f:0xbc5b8ab1e46ce8e2!8m2!3d16.8038103!4d96.1372762" style="border:0" allowfullscreen></iframe>
+                        </div>
+                        <div class="col-md-6 contact-in">
+                            <h2>What is Online Recharge?</h2>
+                        <p>   This is the digital online payment system for Myanmar. The name of this website is Burmese Power. This website will help to pay electricity bill from online without needing to go physical electricity offices. People can easily pay their costs of electricity bill within a small amount of time.
+Users just only need to register and payment system to use this website. In this website, a little number of steps are needed for paying bill and they are very simple. This will help Myanmar people for money and time saving to pay for electricity bill. </p>
 
+				 </div>
+                            <div class="clearfix"> </div>
+                      </div>
 
-
-                <h1> bank List</h1>
-
-                <table>
-
-                    <tr>
-                            <th>User Name</th>
-                            <th>Card Number</th>
-                            <th>Amount</th>
-                            <th>Password</th>
-                @foreach ($bank as $bank)
-
-                <tr>
-                        <td>{{$bank->name}}</td>
-                        <td>{{$bank->cardNumber}}</td>
-                        <td>{{$bank->amount}}</td>
-                        <td>{{$bank->password}}</td>
-
-                      </tr>
-                @endforeach
-
-              </table>
-
-
-            </div>
-        </div>
+           </div>
     </div>
 <!--//geolocation-->
 

@@ -38,8 +38,15 @@
                     <h1><a href="index.html">Burmese Power</a></h1>
                 </div>
             <!--//logo-->
-              <div class="w3layouts-login">
-                    <a data-toggle="modal" data-target="#myModal" href="#"><i class="glyphicon glyphicon-user"> </i>Login/Register</a>
+
+                <div class="w3layouts-login">
+                    <a href="index"><i class="glyphicon glyphicon-user">About Us </i></a>
+                </div>
+                <div class="w3layouts-login">
+                    <a href="index"><i class="glyphicon glyphicon-user">Contact Us</i></a>
+                </div>
+                <div class="w3layouts-login">
+                    <a href="index"><i class="glyphicon glyphicon-user">Home </i></a>
                 </div>
                     <div class="clearfix"></div>
         <!--Login modal-->

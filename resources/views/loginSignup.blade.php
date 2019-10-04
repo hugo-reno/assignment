@@ -146,8 +146,7 @@
                                         </div>
                                         <div class="col-md-12">
                                             <div class="btn-group btn-group-justified">
-                                                <a href="#" class="btn btn-primary">Facebook</a> <a href="#" class="btn btn-danger">
-                                                    Google +</a>
+                                                <a href="#" class="btn btn-primary">Facebook</a>
                                             </div>
                                         </div>
                                     </div>

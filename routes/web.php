@@ -40,6 +40,15 @@ Route::get('eAdmin', function () {
 });
 
 
+Route::get('contact', function () {
+    return view('contact');
+});
+
+
+Route::get('about', function () {
+    return view('about');
+});
+
 
 route::get ('index','informationController@index');
 
@@ -70,4 +79,8 @@ Route::get('bank', function () {
     return view('bank');
 });
 
-route::get ('/bank','informationController@bankAmount');
+
+route::get ('bank','informationController@bankData');
+
+
+route::get ('\bank\submit','informationController@bankAmount');

@@ -11,16 +11,25 @@ use  Mapper;
 
 class informationController extends Controller
 {
-    public function index() {
+    public function index(Request $request) {
 
         $in = information::all();
        $mapper= Mapper::map(16.822113, 96.203480);
         $n= information::where('name','=','mgmg')->first();
+        $input = $request->all();
+        $id = $request->input('id');
+
+        //dd($id);
+
+        $bill= bill::where([['userID','=',$id]])->first();
+        $amount= bill::where('userID', $id)->get(['billAmount']);
+
+        $billforPay=($bill['billAmount']);
 
         $bill = bill::all();
 
-
         $bank=bank::all();
+
 
        // $id = information::where('name','=','mgmg','AND','email','=','mgmg@gmail.com')->first();
        $id = information::where('name','=','mgmg','AND','password','=','csm85494')->first();
@@ -87,24 +96,35 @@ class informationController extends Controller
         $id = null;
 
 
-      $auth1= information::where('email','=',$email)->first();
 
-    $auth2=information::where('password','=',$password)->first();
+     // $auth1= information::where('email','=',$email)->first();
+
+    //$auth2=information::where('password','=',$password)->first();
+
+        $result= information::where([['email','=',$email],['password','=', $password]])->first();
 
 
-             dd($auth1);
-           // dd($auth2);
+   //$id=information::where('email', 'aungaung@gmail.com')->first('userID');
 
 
-        if($auth1=='null' && $auth2=='null'){
+
+        $id=($result['userID']);
+         //dd($result);
+
+        if($result==null){
 
             return back();
-        }
-        else{
-            return redirect('index');
 
         }
+        else if($result!=null) {
+            return redirect()->action(
+                'informationController@index', ['id'=> $id],
+            );
 
+        }
+        else {
+            return back();
+        }
     }
 
 
@@ -151,8 +171,15 @@ class informationController extends Controller
           $bank->password=request('password');
            $bank->amount=request('amount');
             $bank->save();
-            $bank = bank::all();
-            $response = $this->get('/');
+
+
+    }
+
+    public function bankData() {
+
+        $bank=bill::all();
+
+        return view ('bank',['bank'=>$bank]);
 
     }
 
